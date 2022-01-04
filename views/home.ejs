@@ -1,0 +1,13 @@
+<%- include partials/header.ejs %>
+
+<h1>Home</h1>
+<p> <%= startingContent %> </p>
+
+<% newPosts.forEach(function(newPost){ %>
+    <h1> <%= newPost.title %></h1>
+    <p> <%= newPost.blog.substring(0,100) + " ..." %>
+        <a href="/posts/<%=newPost.title%>">read more</a>
+    </p>
+<% }) %>
+
+<%- include partials/footer.ejs %>
